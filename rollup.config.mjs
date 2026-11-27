@@ -6,10 +6,10 @@ import commonjs from '@rollup/plugin-commonjs';
 export default [
   {
     input: 'src/index.ts',
-    output: {
-      file: 'dist/bundle.js',
-      format: 'es',
-    },
+    output: [
+      { file: 'dist/bundle.js', format: 'es' },
+      { file: 'dist/bundle.cjs', format: 'cjs' },
+    ],
     plugins: [
       nodeResolve(),
       commonjs(),
@@ -20,7 +20,10 @@ export default [
   },
   {
     input: './dist/types/index.d.ts',
-    output: [{ file: 'dist/bundle.d.ts', format: 'es' }],
+    output: [
+      { file: 'dist/bundle.d.ts', format: 'es' },
+      { file: 'dist/bundle.d.cts', format: 'es' },
+    ],
     plugins: [dts()],
   }
 ];

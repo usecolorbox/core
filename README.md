@@ -1,6 +1,12 @@
-# color-algorithm
+# @usecolorbox/core
 
-A JavaScript function for producing color sets. Used to build Lyft's color system (Spectrum) and power [ColorBox](https://www.colorbox.io/).
+The Colorbox color scale engine, descended from Lyft's color algorithm. Runs locally with no accounts, network requests, or telemetry.
+
+This package succeeds `@k-vyn/coloralgorithm`. Version 2.0.0 preserves the v2 generation API, validation, and palette output. See the [migration guide](MIGRATION.md) for updating imports or migrating from v1.
+
+Licensed under Apache-2.0; the upstream Lyft license and attribution are preserved. New Colorbox tools and services have their own licensing decisions.
+
+**Release status:** this migration is prepared but has not yet been published to npm.
 
 ## Upgrading to v2.0.0
 
@@ -16,7 +22,7 @@ v2.0.0 introduces **input validation** with helpful error messages. This is a br
 If your code was already passing valid inputs, no changes needed. If you were relying on silent failures, wrap calls in try/catch:
 
 ```typescript
-import { generate, ColorAlgorithmError } from "@k-vyn/coloralgorithm";
+import { generate, ColorAlgorithmError } from "@usecolorbox/core";
 
 try {
   const palette = generate(props);
@@ -35,7 +41,7 @@ try {
 ## Install
 
 ```
-npm i @k-vyn/coloralgorithm
+npm i @usecolorbox/core
 ```
 
 ## Usage
@@ -43,7 +49,7 @@ npm i @k-vyn/coloralgorithm
 ### ES Modules (Recommended)
 
 ```typescript
-import { generate } from "@k-vyn/coloralgorithm";
+import { generate } from "@usecolorbox/core";
 
 const palette = generate(props, options);
 ```
@@ -51,8 +57,8 @@ const palette = generate(props, options);
 ### With TypeScript Types
 
 ```typescript
-import { generate, ColorAlgorithmError, ErrorCodes } from "@k-vyn/coloralgorithm";
-import type { ColorProps, ColorOptions, ColorResults } from "@k-vyn/coloralgorithm";
+import { generate, ColorAlgorithmError, ErrorCodes } from "@usecolorbox/core";
+import type { ColorProps, ColorOptions, ColorResults } from "@usecolorbox/core";
 
 const props: ColorProps = {
   steps: 11,
@@ -67,7 +73,7 @@ const palette: ColorResults = generate(props, { name: "Blue" });
 ### CommonJS
 
 ```javascript
-const { generate } = require("@k-vyn/coloralgorithm");
+const { generate } = require("@usecolorbox/core");
 generate(props, options);
 ```
 
@@ -327,7 +333,7 @@ const result = [
 v2.0.0+ validates all inputs and throws `ColorAlgorithmError` for invalid values.
 
 ```typescript
-import { generate, ColorAlgorithmError, ErrorCodes } from "@k-vyn/coloralgorithm";
+import { generate, ColorAlgorithmError, ErrorCodes } from "@usecolorbox/core";
 
 try {
   const palette = generate(props);

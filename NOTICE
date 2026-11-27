@@ -1,0 +1,16 @@
+Colorbox Core
+
+This package is derived from Lyft's coloralgorithm and Kevyn Arnott's
+@k-vyn/coloralgorithm fork.
+
+Copyright 2014 Lyft, Inc.
+
+Original project: https://github.com/lyft/coloralgorithm
+Previous fork: https://github.com/k-vyn/coloralgorithm
+Current project: https://github.com/usecolorbox/core
+
+The initial @usecolorbox/core 2.0.0 migration changes package identity,
+documentation, license metadata, and module packaging. It preserves the existing
+generation algorithm and upstream Apache License, Version 2.0.
+
+Bundled third-party licenses are included in THIRD_PARTY_NOTICES.md.
