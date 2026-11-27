@@ -6,8 +6,6 @@ This package succeeds `@k-vyn/coloralgorithm`. Version 2.0.0 preserves the v2 ge
 
 Licensed under Apache-2.0; the upstream Lyft license and attribution are preserved. New Colorbox tools and services have their own licensing decisions.
 
-**Release status:** this migration is prepared but has not yet been published to npm.
-
 ## Upgrading to v2.0.0
 
 v2.0.0 introduces **input validation** with helpful error messages. This is a breaking change if your code was passing invalid inputs that previously failed silently.
