@@ -3,9 +3,6 @@
 `@usecolorbox/core` is the successor to `@k-vyn/coloralgorithm`.
 The initial release keeps version 2.0.0 to match the existing v2 API.
 
-**Release status:** prepared, not yet published. Use the commands below only
-after `npm view @usecolorbox/core@2.0.0 version` confirms the release exists.
-
 ## From @k-vyn/coloralgorithm v2
 
 Install the replacement and remove the previous direct dependency:
