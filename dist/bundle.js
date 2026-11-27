@@ -4153,7 +4153,7 @@ function validateHex(hex, field) {
  *
  * @example
  * ```typescript
- * import { generate } from '@k-vyn/coloralgorithm';
+ * import { generate } from '@usecolorbox/core';
  *
  * const palette = generate({
  *   steps: 11,
